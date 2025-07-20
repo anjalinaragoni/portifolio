@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjali's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="anjaliphoto.jpg">
+  <style>
+    :root {
+      --primary: #f9f9f9;
+      --secondary: #111;
+      --accent: #0077ff;
+      --glass-bg: rgba(255, 255, 255, 0.1);
+    }
+    body.dark {
+      --primary: #111;
+      --secondary: #f9f9f9;
+      --glass-bg: rgba(0, 0, 0, 0.2);
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--secondary);
+      background: linear-gradient(270deg, #1e3c72, #2a5298, #1e3c72);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+    }
+    .toggle-theme {
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    .section {
+      padding: 2rem;
+      margin: 1rem;
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill-bar {
+      width: 100%;
+    }
+    .bar {
+      height: 10px;
+      border-radius: 5px;
+      background-color: var(--secondary);
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+    .fill {
+      height: 100%;
+      background-color: var(--accent);
+      animation: fillAnim 2s ease-in-out;
+    }
+    @keyframes fillAnim {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    .projects .card {
+      background: var(--primary);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .projects .card:hover {
+      transform: scale(1.03);
+    }
+    .certs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .cert {
+      padding: 0.5rem 1rem;
+      background-color: var(--accent);
+      color: white;
+      border-radius: 1rem;
+      transition: transform 0.3s;
+    }
+    .cert:hover {
+      transform: scale(1.1);
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    .download {
+      background-color: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Anjali's Portfolio</h2>
+    <div class="toggle-theme" onclick="toggleTheme()"><i class="fas fa-adjust"></i></div>
+  </header>
+
+  <section class="section" data-aos="fade-up">
+    <h3>About Me</h3>
+    <p>Innovative and results-driven third-year B.Tech student specializing in AI/ML. Strong foundation in object-oriented programming (Java, Python) and full-stack development (HTML,CSS,JS). Passionate about solving real-world challenges through scalable and efficient software solutions. Seeking an internship at Microsoft to contribute to high-impact projects while learning from industry leaders. </p>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h3>Education</h3>
+    <ul>
+      <li>Guru nanak institutions-AIML</li>
+      <li>Gouthami junior college-MPC</li>
+      <li>SPR School Of Exellence-SSC</li>
+    </ul>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h3>Tech Stack</h3>
+    <div class="skills">
+      <div class="skill-bar">
+        <p>HTML</p>
+        <div class="bar"><div class="fill" style="width: 95%;"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>CSS</p>
+        <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>JavaScript</p>
+        <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>Python</p>
+        <div class="bar"><div class="fill" style="width: 80%;"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>AI/ML</p>
+        <div class="bar"><div class="fill" style="width: 75%;"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section projects" data-aos="fade-up">
+    <h3>Projects</h3>
+    <div class="card" onclick="window.open('https://github.com/anjalinaragoni/face-recognisation')">
+      <h4>Face Recognition</h4>
+      <p> Developed a real-time face recognition system using OpenCV & TensorFlow, improving automated 
+    attendance accuracy by 90%. Implemented facial dataset training for multi-user recognition, enabling 
+    secure and scalable authentication. 
+    • Python, OpenCV, Deep Learning (TensorFlow/PyTorch),NumPy, Pandas technology are used.</p>
+    </div>
+    <div class="card" onclick="window.open('https://github.com/anjalinaragoni/weather-app')">
+      <h4>Weather app </h4>
+      <p> Built a real-time weather forecasting app using React.js & OpenWeatherMap API. Implemented 
+    an intuitive UI/UX, optimizing API response handling for a 50% faster user experience. 
+    • HTML, CSS, JavaScript (Frontend),React.js / Vanilla,JavaScript (depending on implementation) OpenWeatherMap 
+    API (or any other weather API.)</p>
+    </div>
+    <div class="card" onclick="window.open('https://github.com/anjalinaragoni/language-translator')">
+      <h4>language-translator  </h4>
+      <p> Supports multiple languages for seamless translation User-friendly interface for easy text input and output Fast and accurate translations using an API or AI model Lightweight and efficient for real-world applications. 
+      • AI,ML lib,Google Translate API / DeepL API.</p>
+    </div>
+  </section>
+
+ <section class="section" data-aos="fade-up">
+  <h3>Certificates</h3>
+  <div class="certs">
+    <a href="https://www.linkedin.com/posts/anjalinaragoni_techx-codingbattle-competitiveprogramming-activity-7295120648090066946-pjyh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEh_9VwB_It_pK0i2KTLnF7d_spRxG49mnw" target="_blank" class="cert">Tech X Coding battle merit </a>
+    <a href="https://www.linkedin.com/posts/anjalinaragoni_hackarena-healthtech-careconnect-activity-7270645029440761857-oN2m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEh_9VwB_It_pK0i2KTLnF7d_spRxG49mnw" target="_blank" class="cert">Hackerena Hackathon</a>
+    <a href="https://www.linkedin.com/posts/anjalinaragoni_python-certification-programming-activity-7267883573490135040-IvdJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEh_9VwB_It_pK0i2KTLnF7d_spRxG49mnw" target="_blank" class="cert">Hackerank Python Certificate</a>
+    <a href="https://www.linkedin.com/posts/anjalinaragoni_i-recently-completed-a-comprehensive-course-activity-7246909995395530752-SNwy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEh_9VwB_It_pK0i2KTLnF7d_spRxG49mnw" target="_blank" class="cert">Udemy python/java Certificate</a>
+    <a href="https://www.linkedin.com/posts/anjalinaragoni_i-recently-had-the-opportunity-to-attend-activity-7235976874089193472-KUfs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEh_9VwB_It_pK0i2KTLnF7d_spRxG49mnw" target="_blank" class="cert">Next wave AI workshop</a>
+  </div>
+</section>
+
+
+  <section class="section" data-aos="fade-up">
+    <h3>Contact</h3>
+    <form action="mailto:naragonianjali@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required><br><br>
+      <input type="email" name="email" placeholder="Your Email" required><br><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+      <input type="submit" value="Send">
+    </form>
+  </section>
+
+  <div class="footer">
+    <button class="download" onclick="window.open('anjali (1).pdf')">📄 Download Resume</button>
+    <p>&copy; 2025 Anjali Naragoni</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
